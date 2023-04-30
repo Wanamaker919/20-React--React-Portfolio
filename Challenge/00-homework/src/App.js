@@ -1,26 +1,51 @@
-import logo from './logo.svg';
+
 import './App.css';
 import { ReactDOM } from 'react';
-import { BroswerRouter as Router, Route, Switch} from 'react-router-dom';
+import { createBrowserRouter, RouterProvider} from 'react-router-dom';
+import Navapp from './Components/Nav';
+import HeaderApp from './Components/Header';
+import FooterApp from './Components/Footer';
+import HomeApp from './Components/Home';
+import AboutApp from './Components/about';
+import PortfolioApp from './Components/portfolio';
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    loader: () => ({ message: "Hello Data Router!" }),
+    element: <Navapp></Navapp>
+  },
+  {
+    path: "/portfolio",
+    loader: () => ({ message: "Hello Data Router!" }),
+    element: <PortfolioApp></PortfolioApp>
+  },
+  {
+    path: "/about",
+    loader: () => ({ message: "Hello Data Router!" }),
+    element: <AboutApp></AboutApp>
+  },
+  {
+    path: "*",
+    loader: () => ({ message: "Hello Data Router!" }),
+    element: <div> 404 PAGE NOT FOUND </div>
+  },
+
+
+    
+    
+]);
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-          >
-          Learn React
-        </a>
-      </header>
-          <Route></Route>
+    <RouterProvider router={router} fallbackElement={<p>loading...</p>}>
+
+
+    <div className="App">  
+    <HeaderApp></HeaderApp>    
+        
+    <FooterApp></FooterApp>
     </div>
+            </RouterProvider>
   );
 }
 

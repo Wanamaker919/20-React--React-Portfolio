@@ -13,3 +13,4 @@ function Navapp(){
         </div>
     )
 }
+export default Navapp;

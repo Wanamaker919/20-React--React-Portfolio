@@ -32,7 +32,7 @@ font-family: sans-serif;
     border-width: 5px;
 
   }
-  a[href*='About Me']:{
+  a {
     margin-left: 3px;
     border-style: solid;
     border-color: green;
