@@ -1,20 +1,20 @@
 
 import './App.css';
-import { ReactDOM } from 'react';
+import { Children, ReactDOM } from 'react';
 import { createBrowserRouter, RouterProvider} from 'react-router-dom';
 import Navapp from './Components/Nav';
 import HeaderApp from './Components/Header';
 import FooterApp from './Components/Footer';
 import HomeApp from './Components/Home';
-import AboutApp from './Components/about';
 import PortfolioApp from './Components/portfolio';
 
 const router = createBrowserRouter([
   {
     path: "/",
     loader: () => ({ message: "Hello Data Router!" }),
-    element: <Navapp></Navapp>
+    element: <HomeApp></HomeApp>
   },
+
   {
     path: "/portfolio",
     loader: () => ({ message: "Hello Data Router!" }),
@@ -23,7 +23,7 @@ const router = createBrowserRouter([
   {
     path: "/about",
     loader: () => ({ message: "Hello Data Router!" }),
-    element: <AboutApp></AboutApp>
+    element: <HeaderApp></HeaderApp>
   },
   {
     path: "*",
@@ -42,11 +42,11 @@ function App() {
 
     <div className="App">  
     <HeaderApp></HeaderApp>    
-        
     <FooterApp></FooterApp>
     </div>
             </RouterProvider>
   );
 }
+
 
 export default App;
