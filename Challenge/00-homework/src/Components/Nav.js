@@ -20,16 +20,16 @@ function Navapp(){
     <div className="collapse navbar-collapse flex-grow-1 text-right" id="myNavbar">
         <ul className="navbar-nav ms-auto flex-nowrap">
             <li className="nav-item">
-                <Link href="/about" className="nav-link m-2 menu-item nav-active">About Me</Link>
+                <Link to="/about" className="nav-link m-2 menu-item nav-active">About Me</Link>
             </li>
             <li className="nav-item">
-                <Link href="/portfolio" className="nav-link m-2 menu-item">Portfolio</Link>
+                <Link to="/portfolio" className="nav-link m-2 menu-item">Portfolio</Link>
+            </li>
+            <li className="nav-item">
+                <Link to="/contact" className="nav-link m-2 menu-item">Contact</Link>
             </li>
             <li className="nav-item">
                 <Link href="/Resume" className="nav-link m-2 menu-item">Resume</Link>
-            </li>
-            <li className="nav-item">
-                <Link href="/" className="nav-link m-2 menu-item">Contact</Link>
             </li>
         </ul>
     </div>
