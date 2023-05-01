@@ -23,7 +23,7 @@ function Navapp(){
                 <Link to="/about" className="nav-link m-2 menu-item nav-active">About Me</Link>
             </li>
             <li className="nav-item">
-                <Link to="/portfolio" className="nav-link m-2 menu-item">Portfolio</Link>
+                <Link to="/portfolio" className="nav-link m-2 menu-item nav-active">Portfolio</Link>
             </li>
             <li className="nav-item">
                 <Link to="/contact" className="nav-link m-2 menu-item">Contact</Link>
